@@ -20,6 +20,15 @@ remove = [
   'window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.gabrieldegennaro.com.br\/projects\/api_builder\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};',
   '<link rel="alternate" type="application/json+oembed" href="https://www.apibuilder.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.gabrieldegennaro.com.br%2Fprojects%2Fapi_builder%2F">',
   '<link rel="alternate" type="text/xml+oembed" href="https://www.apibuilder.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.gabrieldegennaro.com.br%2Fprojects%2Fapi_builder%2F&amp;format=xml">',
+  '<link rel="alternate" type="application/rss+xml" title="API | Builder » Home Comments Feed" href="https://www.apibuilder.io/home/feed/">',
+  '<meta name="author" content="Wesley Andrade - http://www.github.com/wesandradealves - wesandradealves@gmail.com">',
+  '<meta name="copyright" content="Wesley Andrade - http://www.github.com/wesandradealves - wesandradealves@gmail.com">',
+  '<meta name="audience" content="all">',
+  '<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">',
+  '<meta http-equiv="cache-Control" content="no-cache, no-store, must-revalidate">',
+  '<meta http-equiv="expires" content="0">',
+  '<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">',
+  '<meta http-equiv="pragma" content="no-cache">',
 ]
 
 changes = {
