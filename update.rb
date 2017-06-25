@@ -2,6 +2,7 @@
 # coding: utf-8
 
 remove = [
+  '<!-- saved from url=(0056)http://www.gabrieldegennaro.com.br/projects/api_builder/ -->',
   '<link rel="https://api.w.org/" href="http://www.gabrieldegennaro.com.br/projects/api_builder/wp-json/">',
   '<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.gabrieldegennaro.com.br/projects/api_builder/xmlrpc.php?rsd">',
   '<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.gabrieldegennaro.com.br/projects/api_builder/wp-includes/wlwmanifest.xml"> ',
@@ -17,13 +18,21 @@ remove = [
   '<link rel="https://api.w.org/" href="http://www.gabrieldegennaro.com.br/projects/api_builder/wp-json/">',
   '<link rel="alternate" type="application/rss+xml" title="API | Builder » Home Comments Feed" href="http://www.gabrieldegennaro.com.br/projects/api_builder/home/feed/">',
   'window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.gabrieldegennaro.com.br\/projects\/api_builder\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};',
+  '<link rel="alternate" type="application/json+oembed" href="https://www.apibuilder.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.gabrieldegennaro.com.br%2Fprojects%2Fapi_builder%2F">',
+  '<link rel="alternate" type="text/xml+oembed" href="https://www.apibuilder.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.gabrieldegennaro.com.br%2Fprojects%2Fapi_builder%2F&amp;format=xml">',
 ]
+
+changes = {
+  'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/themes/api_builder/screenshot.png' => 'misc/screenshot.png',
+  'href="http://www.gabrieldegennaro.com.br/projects/api_builder' => 'href="https://www.apibuilder.io',
+  'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/uploads/2017/06/hero-1.jpg' => 'misc/hero-1.jpg',
+}
 
 File.open("index.html", "w") do |out|
   IO.readlines("original.html").each do |l|
-    l.sub!("http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/themes/api_builder/screenshot.png", "misc/screenshot.png")
-    l.sub!('href="http://www.gabrieldegennaro.com.br/projects/api_builder', 'href="https://www.apibuilder.io')
-
+    changes.each do |from,to|
+      l.sub!(from, to)
+    end
     remove.each do |text|
       l.sub!(text, "")
     end
