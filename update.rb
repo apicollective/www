@@ -36,7 +36,7 @@ remove = [
   '<link rel="shortlink" href="https://www.apibuilder.io/">',
   '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="32x32">',
   '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="192x192">',
-  '<link rel="apple-touch-icon-precomposed" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png">'
+  '<link rel="apple-touch-icon-precomposed" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png">',
 ]
 
 changes = {
@@ -46,6 +46,7 @@ changes = {
   'content="http://www.gabrieldegennaro.com.br/projects/api_builder"' => 'content="https://www.apibuilder.io"',
   'The most robust way to manage REST APIs' => 'Simple, Comprehensive Tooling for Modern APIs',
   '</head>' => '<link rel="shortcut icon" type="image/png" href="https://app.apibuilder.io/assets/images/favicon.ico"></head>',
+  'API _ Builder - Simple, Comprehensive Tooling for Modern APIs_files' => 'files',
 }
 
 final = ""
