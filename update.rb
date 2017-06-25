@@ -29,6 +29,7 @@ remove = [
   '<meta http-equiv="expires" content="0">',
   '<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">',
   '<meta http-equiv="pragma" content="no-cache">',
+  '<meta name="language" content="pt-br">',
 ]
 
 changes = {
@@ -36,6 +37,7 @@ changes = {
   'href="http://www.gabrieldegennaro.com.br/projects/api_builder' => 'href="https://www.apibuilder.io',
   'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/uploads/2017/06/hero-1.jpg' => 'misc/hero-1.jpg',
   'content="http://www.gabrieldegennaro.com.br/projects/api_builder"' => 'content="https://www.apibuilder.io"',
+  'The most robust way to manage REST APIs' => 'Simple, Comprehensive Tooling for Modern APIs',
 }
 
 File.open("index.html", "w") do |out|
