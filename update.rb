@@ -36,7 +36,7 @@ remove = [
   '<link rel="shortlink" href="https://www.apibuilder.io/">',
   '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="32x32">',
   '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="192x192">',
-  '<link rel="apple-touch-icon-precomposed" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png">',
+  '<link rel="apple-touch-icon-precomposed" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png">'
 ]
 
 changes = {
@@ -48,18 +48,20 @@ changes = {
   '</head>' => '<link rel="shortcut icon" type="image/png" href="https://app.apibuilder.io/assets/images/favicon.ico"></head>',
 }
 
-File.open("index.html", "w") do |out|
-  IO.readlines("original.html").each do |l|
-    changes.each do |from,to|
-      l.sub!(from, to)
-    end
-    remove.each do |text|
-      l.sub!(text, "")
-    end
-    l.strip!
-    if !l.empty?
-      out << l.strip << "\n"
-    end
+final = ""
+IO.readlines("original.html").each do |l|
+  changes.each do |from,to|
+    l.sub!(from, to)
+  end
+  remove.each do |text|
+    l.sub!(text, "")
+  end
+  l.strip!
+  if !l.empty?
+    final << l.strip << "\n"
   end
 end
 
+File.open("index.html", "w") do |out|
+  out << final.gsub(/<\!---->/, '').strip
+end
