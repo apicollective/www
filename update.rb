@@ -46,7 +46,10 @@ File.open("index.html", "w") do |out|
     remove.each do |text|
       l.sub!(text, "")
     end
-    out << l.strip << "\n"
+    l.strip!
+    if !l.empty?
+      out << l.strip << "\n"
+    end
   end
 end
 
