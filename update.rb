@@ -26,6 +26,7 @@ changes = {
   'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/themes/api_builder/screenshot.png' => 'misc/screenshot.png',
   'href="http://www.gabrieldegennaro.com.br/projects/api_builder' => 'href="https://www.apibuilder.io',
   'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/uploads/2017/06/hero-1.jpg' => 'misc/hero-1.jpg',
+  'content="http://www.gabrieldegennaro.com.br/projects/api_builder"' => 'content="https://www.apibuilder.io"',
 }
 
 File.open("index.html", "w") do |out|
