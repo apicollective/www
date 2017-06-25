@@ -30,6 +30,13 @@ remove = [
   '<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">',
   '<meta http-equiv="pragma" content="no-cache">',
   '<meta name="language" content="pt-br">',
+  '<link rel="https://api.w.org/" href="https://www.apibuilder.io/wp-json/">',
+  '<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.apibuilder.io/xmlrpc.php?rsd">',
+  '<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.apibuilder.io/wp-includes/wlwmanifest.xml">',
+  '<link rel="shortlink" href="https://www.apibuilder.io/">',
+  '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="32x32">',
+  '<link rel="icon" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png" sizes="192x192">',
+  '<link rel="apple-touch-icon-precomposed" href="https://www.apibuilder.io/wp-content/uploads/2017/06/bullet.png">',
 ]
 
 changes = {
@@ -38,6 +45,7 @@ changes = {
   'http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/uploads/2017/06/hero-1.jpg' => 'misc/hero-1.jpg',
   'content="http://www.gabrieldegennaro.com.br/projects/api_builder"' => 'content="https://www.apibuilder.io"',
   'The most robust way to manage REST APIs' => 'Simple, Comprehensive Tooling for Modern APIs',
+  '</head>' => '<link rel="shortcut icon" type="image/png" href="https://app.apibuilder.io/assets/images/favicon.ico"></head>',
 }
 
 File.open("index.html", "w") do |out|
