@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	executor := executor.Create("track")
+	executor := executor.Create("www")
 	executor = executor.Add("git checkout master")
 	executor = executor.Add("git pull origin master")
 	executor = executor.Add("dev tag")
