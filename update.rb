@@ -19,10 +19,11 @@ remove = [
   'window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.gabrieldegennaro.com.br\/projects\/api_builder\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};',
 ]
 
-File.open("foo.html", "w") do |out|
-  IO.readlines("index.html").each do |l|
+File.open("index.html", "w") do |out|
+  IO.readlines("original.html").each do |l|
     l.sub!("http://www.gabrieldegennaro.com.br/projects/api_builder/wp-content/themes/api_builder/screenshot.png", "misc/screenshot.png")
     l.sub!('href="http://www.gabrieldegennaro.com.br/projects/api_builder', 'href="https://www.apibuilder.io')
+
     remove.each do |text|
       l.sub!(text, "")
     end
