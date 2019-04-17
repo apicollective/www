@@ -6,7 +6,6 @@ Author: Gabriel de Gennaro
 Author URI: http://www.gabrieldegennaro.com.br
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700");
-@import url(http://weloveiconfonts.com/api/?family=brandico);
 textarea[placeholder] {
   text-overflow: ellipsis;
   color: #eaeaea;
@@ -165,10 +164,6 @@ textarea:-ms-input-placeholder {
   overflow: visible;
   position: static;
   width: auto;
-}
-
-[class*="brandico-"]::before {
-  font-family: 'brandico', sans-serif;
 }
 
 @-webkit-keyframes top-opacity {
