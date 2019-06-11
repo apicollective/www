@@ -720,6 +720,11 @@ header #github-badge {
 
 #webdoor [class*="btn"] {
   margin-top: 40px;
+  max-width: 200px;
+}
+
+#join-slack {
+  margin-left: 15px;
 }
 
 @media only screen and (min-width: 1200px) {
